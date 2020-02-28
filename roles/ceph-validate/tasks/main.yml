@@ -239,3 +239,10 @@
     - ceph_docker_registry_auth | bool
     - (ceph_docker_registry_username is not defined or ceph_docker_registry_password is not defined) or
       (ceph_docker_registry_username | length == 0 or ceph_docker_registry_password | length == 0)
+
+- name: include check_pools.yml
+  include_tasks: check_pools.yml
+  when:
+    - openstack_pools | length > 0
+      or cephfs_pools | length > 0
+      or pools | length > 0
