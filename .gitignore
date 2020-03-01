@@ -8,7 +8,8 @@ group_vars/mons
 group_vars/osds
 group_vars/mdss
 group_vars/rgws
-group_vars/*.yml
+#group_vars/*.yml
+group_vars/*.yml.save
 *.DS_Store
 /*.yml
 *.pyc
@@ -20,3 +21,5 @@ ceph-ansible.spec
 !.travis.yml
 !.mergify.yml
 !raw_install_python.yml
+ansible.log
+site.yml.old
